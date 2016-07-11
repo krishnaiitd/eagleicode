@@ -43,7 +43,7 @@ class LinkList:
 			return self.head
 
 		StartNode = self.head
-		
+
 		while StartNode.GetNext() is not None:
 			StartNode = StartNode.GetNext()
 
@@ -133,6 +133,11 @@ print head.PrintAsString()
 print head.Size()
 print 'Removed from Frist'
 head.RemovedAtFirst()
+
+print head.PrintAsString()
+print head.Size()
+
+head.InsertAtFirst('afdsf')
 
 print head.PrintAsString()
 print head.Size()
