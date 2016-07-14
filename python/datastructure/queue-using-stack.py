@@ -44,7 +44,7 @@ class Queue:
 		rel = self.s2.Pop()
 
 		# Replace back all element to S1
-		for item in range(self.s2.Size()):
+		for i in range(self.s2.Size()):
 			el = self.s2.Pop()
 			self.s1.Insert(el)
 
