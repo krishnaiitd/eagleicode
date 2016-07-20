@@ -1,6 +1,6 @@
 costArray = []
 
-def ReduceArray(a):
+def ReducedArray(a):
 	a.sort(reverse=True)
 	x = a.pop()
 	y = a.pop()
@@ -12,7 +12,7 @@ def ReduceArray(a):
 def FindSum(a):
 	if len(a) < 2:
 		return a.pop()
-	a = ReduceArray(a)
+	a = ReducedArray(a)
 	return FindSum(a)
 
 def FindCost(a):
