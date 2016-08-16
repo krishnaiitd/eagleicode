@@ -21,7 +21,6 @@ class Node:
 		return self.next
 
 
-
 class LinkList:
 	def __init__(self):
 		self.head = None
@@ -104,6 +103,39 @@ class LinkList:
 		s = s + str(start.GetData()) + "-> None"
 		return s
 
+	def Reverse(self):
+		reverse = None
+		current = self.head
+		while(current is not None):
+			next = current.GetNext()
+			current.SetNext(reverse)
+			reverse = current
+			current = next
+		self.head = reverse
+
+	def ReverseHalf(self):
+		# first find the length of the link list:
+		n = 0;
+		lengthNode = self.head
+		while lengthNode is not None:
+			n = n + 1
+			lengthNode = lengthNode.GetNext()
+
+		print n;
+		print 'half length is ', n/2
+
+		reverse = LinkList()
+		current = self.head
+		while(n > 0):
+			next = current.GetNext()
+			current.SetNext(reverse)
+			reverse = current
+			current = next
+			n = n - 1
+
+		print reverse.PrintAsString()
+
+		#self.head = reverse
 
 head = LinkList()
 
@@ -141,3 +173,13 @@ head.InsertAtFirst('afdsf')
 
 print head.PrintAsString()
 print head.Size()
+
+# Reveser it
+print 'Reverse of above list'
+head.Reverse()
+print head.PrintAsString()
+
+head.ReverseHalf()
+
+print head.PrintAsString()
+
