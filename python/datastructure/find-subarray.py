@@ -1,4 +1,4 @@
-def subArray(a, sumvalue):
+ def subArray(a, sumvalue):
 
 	for i in range(len(a)):
 		current_sum = a[i]

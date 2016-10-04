@@ -1,4 +1,4 @@
-# Node class
+ # Node class
 class Node:
 	def __init__(self, item):
 		self.item = item

@@ -1,8 +1,12 @@
-
+"""
+Structure of the tree
+"""
 class Node:
     def __init__(self,data):
         self.right=self.left=None
         self.data = data
+
+
 class Solution:
     def insert(self,root,data):
         if root==None:
@@ -36,11 +40,14 @@ def getHeight(self,root):
 
 
 
-T=int(input())
-myTree=Solution()
-root=None
+T = int(input())
+
+myTree = Solution()
+
+root = None
+
 for i in range(T):
-    data=int(input())
-    root=myTree.insert(root,data)
-height=myTree.getHeight(root)
+    data = int(input())
+    root = myTree.insert(root,data)
+height = myTree.getHeight(root)
 print(height)       
