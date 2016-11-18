@@ -62,8 +62,6 @@ def SortedInsert(head, data):
     current.prev = newNode
     return head
 
-
-
 def printAsList(head):
     current = head
     str1 = ''
@@ -74,14 +72,10 @@ def printAsList(head):
     print(str1)
         
 head = InsertAtFirst(None, 2)
-#head = InsertAtFirst(head, 10)
-#head = InsertAtFirst(head, 6)
-#head = InsertAtLast(head, 90)
-#head = InsertAtFirst(head, 100)
-
 head = SortedInsert(head, 1)
 head = SortedInsert(head, 4)
 head = SortedInsert(head, 3)
 
-
 printAsList(head)
+
+
